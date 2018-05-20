@@ -172,9 +172,15 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, set user data and start new activity
                             Log.d("success", "signInWithCredential:success");
+                            boolean isNew = task.getResult().getAdditionalUserInfo().isNewUser();
                             mFbHelper.setUserData();
                             finish();
-                            startActivity(new Intent(LoginActivity.this, TodoListActivity.class));
+                            if(isNew){
+                                startActivity(new Intent(LoginActivity.this, TutorialActivity.class));
+                            } else {
+                                startActivity(new Intent(LoginActivity.this, TodoListActivity.class));
+                            }
+
 
                         } else {
                             // If sign in fails, display a message to the user.

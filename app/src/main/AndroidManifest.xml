@@ -33,6 +33,7 @@
             android:name=".CompletedTodoListActivity"
             android:label="@string/todo_completed_list_label"
             android:screenOrientation="portrait" />
+        <activity android:name=".TutorialActivity"></activity>
     </application>
 
 </manifest>
