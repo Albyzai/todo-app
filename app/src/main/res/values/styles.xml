@@ -1,0 +1,31 @@
+
+
+
+<resources>
+<!-- inherit from the AppCompat theme -->
+<style name="AppTheme" parent="Theme.AppCompat">
+    <!-- your app branding color for the app bar -->
+    <item name="colorPrimary">@color/md_light_green_500</item>
+    <!-- darker variant for the status bar and contextual app bars -->
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <!-- theme UI controls like checkboxes and text fields -->
+    <item name="colorAccent">@color/md_light_green_500</item>
+
+    <item name="android:windowBackground">@color/theme_bg_color</item>
+
+    <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+</style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">4.0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:popupBackground">@color/md_light_green_500</item>
+    </style>
+</resources>
