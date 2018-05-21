@@ -186,7 +186,6 @@ public class LoginActivity extends AppCompatActivity {
                             // If sign in fails, display a message to the user.
                             mGoogleLoginBtn.setVisibility(View.VISIBLE);
                             pBar.setVisibility(View.GONE);
-                            Log.w("failure", "signInWithCredential:failure", task.getException());
                             Toast.makeText(LoginActivity.this, "Failed login", Toast.LENGTH_LONG).show();
                         }
                     }

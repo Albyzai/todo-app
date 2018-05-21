@@ -69,6 +69,7 @@ public class TodoHolder extends RecyclerView.ViewHolder {
         mTitle = currentTodo.getTitle();
         mDescription = currentTodo.getDescription();
 
+
         //Sets text & colors in TodoHolder
         cardForeground.setCardBackgroundColor(mColor);
         tvTitle.setText(mTitle);

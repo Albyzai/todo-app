@@ -98,11 +98,13 @@ public class TodoActivity extends AppCompatActivity {
         tvTitle.setTextColor(mTextColor);
         etDescription.setText(mDescription);
         etDescription.setTextColor(mTextColor);
-        if(mDescription.isEmpty()){
+        tvDescription.setText(mDescription);
+        tvDescription.setTextColor(mTextColor);
+
+
+        if(mDescription == null){
             tvDescription.setText(R.string.todo_tv_description);
         }
-
-        tvDescription.setTextColor(mTextColor);
 
         //Update toolbarmenu to fit options in TodoActivty
         invalidateOptionsMenu();
@@ -350,7 +352,7 @@ public class TodoActivity extends AppCompatActivity {
             fbHelper.saveTodo(todo);
         }
 
-        //Check if saveTodo() is called by the bit button, big sends user back to list, small lets user stay in activity
+        //Check if saveTodo() is called by the big button, big sends user back to list, small lets user stay in activity
         if(bigSaveButtonClicked) {
             startActivity(new Intent(TodoActivity.this, TodoListActivity.class));
         } else {
